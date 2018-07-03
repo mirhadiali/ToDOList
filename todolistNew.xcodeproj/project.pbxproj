@@ -58,11 +58,11 @@
 			children = (
 				1B6A7BF82087F74D00362978 /* AppDelegate.swift */,
 				1B6A7BFA2087F74D00362978 /* ViewController.swift */,
+				1B6A7C0A2087F78800362978 /* SecondViewController.swift */,
 				1B6A7BFC2087F74D00362978 /* Main.storyboard */,
 				1B6A7BFF2087F74D00362978 /* Assets.xcassets */,
 				1B6A7C012087F74D00362978 /* LaunchScreen.storyboard */,
 				1B6A7C042087F74D00362978 /* Info.plist */,
-				1B6A7C0A2087F78800362978 /* SecondViewController.swift */,
 			);
 			path = todolistNew;
 			sourceTree = "<group>";

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,21 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpb-TS-jQD">
-                                <rect key="frame" x="0.0" y="42" width="375" height="625"/>
-                                <color key="backgroundColor" red="0.55236926580000001" green="0.95721788929999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="separatorColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpb-TS-jQD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="dDO-bY-T5w"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AEK-l3-g8G"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P7H-aW-eW0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7H-aW-eW0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="ToDoList" id="Aov-3i-PZh">
-                                        <barButtonItem key="rightBarButtonItem" title="Add" id="NNX-W1-agK">
+                                        <barButtonItem key="leftBarButtonItem" title="Add" id="NNX-W1-agK">
                                             <connections>
                                                 <segue destination="0Ld-JM-CUf" kind="show" identifier="addNew" id="p0y-UT-BhS"/>
                                             </connections>
@@ -44,14 +43,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jpb-TS-jQD" firstAttribute="top" secondItem="P7H-aW-eW0" secondAttribute="bottom" id="2qc-QA-AJv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jpb-TS-jQD" secondAttribute="trailing" id="6qH-X2-xvw"/>
+                            <constraint firstItem="P7H-aW-eW0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NVu-zG-K7t"/>
                             <constraint firstItem="jpb-TS-jQD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zyj-1K-5zY"/>
-                            <constraint firstItem="jpb-TS-jQD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="2.1" id="fQR-UR-irx"/>
+                            <constraint firstItem="P7H-aW-eW0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v5i-TV-VIS"/>
                             <constraint firstItem="jpb-TS-jQD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vo6-Ss-sPL"/>
+                            <constraint firstItem="P7H-aW-eW0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yUP-KN-eNN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="navBar" destination="Aov-3i-PZh" id="gKM-lJ-Qvd"/>
                         <outlet property="table" destination="jpb-TS-jQD" id="wbd-Mf-s07"/>
                     </connections>
                 </viewController>
@@ -112,7 +115,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.55236926576590273" green="0.95721788928735063" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.55294117647058827" green="0.95686274509803915" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="s8C-Dp-AWl" firstAttribute="centerX" secondItem="tyJ-Sp-Ouo" secondAttribute="centerX" id="3h2-vB-0oI"/>
                             <constraint firstItem="wvv-a5-zNf" firstAttribute="centerX" secondItem="tyJ-Sp-Ouo" secondAttribute="centerX" id="OqQ-U3-gW9"/>
