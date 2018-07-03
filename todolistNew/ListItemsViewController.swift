@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ListViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, sendMessage {
+class ListItemsViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, sendMessage {
     func sendMessageToReciever(message: String) {
         self.list.append(message)
         self.table.reloadData()
@@ -105,7 +105,7 @@ class ListViewController: UIViewController, UITableViewDataSource,UITableViewDel
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addNew" {
-            let dest = segue.destination as! SecondViewController
+            let dest = segue.destination as! AddItemsViewController
             dest.delegate = self
         }
     }
